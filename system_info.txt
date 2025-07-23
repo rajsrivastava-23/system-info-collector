@@ -1,0 +1,8 @@
+hostname: DESKTOP-OG96S2N
+ip address: 172.31.128.1
+os info: Windows-11-10.0.22000-SP0
+cpu architecture: ('64bit', 'WindowsPE')
+physical cores: 2
+logical cores:v4
+total ram: 6.14gb
+total disk: 345.48gn
