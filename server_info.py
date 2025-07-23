@@ -1,6 +1,6 @@
 """ server information collector 
 Author     : Utkarsh Srivastava
-github     :
+github     :https://github.com/rajsrivastava-23/system-info-collector.git
 created on : 2025-07-23
 Description:This python script collects detailed system information including:
             -hostname
