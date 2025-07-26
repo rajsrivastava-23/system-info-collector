@@ -9,14 +9,20 @@ Description:This python script collects detailed system information including:
             -physical & logical cpu cores
             -Total RAM & Disk space
 It saves all the details in a clean,timestamped report file(system_info.txt)."""
-         
+ 
+import logging        
 import platform
 import socket
 import psutil
 from datetime import datetime
+
+logging.basicConfig(filename="system_info.log",
+                    level=logging.INFO,
+                    format="%(asctime)s - %(levelname)s - %(message)s")
 def get_system_info():
     
  timestamp = datetime.now().strftime("%Y-%M-%D %H:%M:%S")
+ logging.info(f"System information collected at {timestamp}")
      
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
@@ -38,6 +44,9 @@ with open("system_info.txt", "w") as file:
     file.write(f"total ram: {total_ram}gb\n")
     file.write(f"total disk: {total_disk}gn\n")
     
+    if __name__ =="__main__":
+        get_system_info()
+        
 print("system info saved to system_info.txt")  
 
 
